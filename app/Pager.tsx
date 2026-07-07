@@ -129,19 +129,27 @@ export function Pager() {
                   {partnerRows.map((row, r) => (
                     <div className="logos" key={r}>
                       {row.map((p) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
+                        <a
                           key={p.name}
-                          src={p.src}
-                          alt={p.name}
+                          href={p.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="logo-link"
+                          aria-label={`${p.name} on LinkedIn`}
                           title={p.name}
-                          className="logo"
-                          style={
-                            {
-                              "--logo-scale": p.scale ?? 1,
-                            } as React.CSSProperties
-                          }
-                        />
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={p.src}
+                            alt={p.name}
+                            className="logo"
+                            style={
+                              {
+                                "--logo-scale": p.scale ?? 1,
+                              } as React.CSSProperties
+                            }
+                          />
+                        </a>
                       ))}
                     </div>
                   ))}

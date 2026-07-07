@@ -17,7 +17,7 @@ export const story: Slide[] = [
     logos: true,
   },
   {
-    text: "He drives architecture, performance, and security, and [[mentors the engineers]] behind it.",
+    text: "He drives architecture, performance, security, and [[mentors the engineers]] behind it.",
   },
   {
     text: "He is a graduate of the [[Apple Developer Academy]], and holds a degree in Information Technology with a concentration in Multimedia Engineering.",
@@ -25,20 +25,51 @@ export const story: Slide[] = [
   { text: "He lives and works in [[Indonesia]]." },
 ];
 
-export type Partner = { name: string; src: string; scale?: number };
+export type Partner = { name: string; src: string; href: string; scale?: number };
 
 // `scale` optically balances compact/square marks against wide wordmarks
 export const partnerRows: Partner[][] = [
   [
-    { name: "Tokopedia", src: "/logos/tokopedia.png" },
-    { name: "Maybank", src: "/logos/maybank.png" },
-    { name: "Cloud Ace", src: "/logos/cloud-ace.png", scale: 2.2 },
-    { name: "KOCO", src: "/logos/koco.png", scale: 2.2 },
+    {
+      name: "Tokopedia",
+      src: "/logos/tokopedia.png",
+      href: "https://www.linkedin.com/company/pt-tokopedia/about/",
+    },
+    {
+      name: "Maybank",
+      src: "/logos/maybank.png",
+      href: "https://www.linkedin.com/company/maybank/about/",
+    },
+    {
+      name: "Cloud Ace",
+      src: "/logos/cloud-ace.png",
+      href: "https://www.linkedin.com/company/cloud-ace/about/",
+      scale: 2.2,
+    },
+    {
+      name: "KOCO",
+      src: "/logos/koco.png",
+      href: "https://www.linkedin.com/company/koco-sg/about/",
+      scale: 2.2,
+    },
   ],
   [
-    { name: "Privy", src: "/logos/privy.png" },
-    { name: "Bank Rakyat Indonesia", src: "/logos/bri.png", scale: 1.4 },
-    { name: "Pertamina", src: "/logos/pertamina.png" },
+    {
+      name: "Privy",
+      src: "/logos/privy.png",
+      href: "https://www.linkedin.com/company/privy-id/about/",
+    },
+    {
+      name: "Bank Rakyat Indonesia",
+      src: "/logos/bri.png",
+      href: "https://www.linkedin.com/company/pt-bank-rakyat-indonesia-persero-tbk/about/",
+      scale: 1.4,
+    },
+    {
+      name: "Pertamina",
+      src: "/logos/pertamina.png",
+      href: "https://www.linkedin.com/company/pt-pertamina-hulu-mahakam/about/",
+    },
   ],
 ];
 
