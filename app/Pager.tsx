@@ -107,9 +107,10 @@ export function Pager() {
   }, [next, prev]);
 
   const current = slides[index];
+  const dark = current.kind === "contact";
 
   return (
-    <div className="stage">
+    <div className={`stage${dark ? " dark" : ""}`}>
       <AnimatePresence mode="wait" custom={dir}>
         <motion.div
           key={index}
