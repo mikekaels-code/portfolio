@@ -5,7 +5,7 @@ export type Slide = {
 
 // Wrap phrases in [[ ]] to give them a black highlight with white text.
 export const story: Slide[] = [
-  { text: "Mike Sihombing is a [[software developer]]." },
+  { text: "Mike Sihombing is a [[Software Developer]]" },
   {
     text: "Based in Indonesia, he designs and builds [[iOS applications]] used by millions of people.",
   },
@@ -17,7 +17,7 @@ export const story: Slide[] = [
     logos: true,
   },
   {
-    text: "He drove architectural improvements, established reusable core components, enhanced performance and security standards, and [[mentored engineering teams]] in building scalable and resilient products.",
+    text: "He drives architecture, performance, and security, and [[mentors the engineers]] behind it.",
   },
   {
     text: "He is a graduate of the [[Apple Developer Academy]], and holds a degree in Information Technology with a concentration in Multimedia Engineering.",

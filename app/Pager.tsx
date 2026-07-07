@@ -151,7 +151,7 @@ export function Pager() {
           ) : (
             <div className="contact">
               <p className="label">
-                Get in <span className="mark">touch</span>.
+                Get in <span className="mark">touch</span>
               </p>
               <div className="links">
                 <a href={`mailto:${contact.email}`}>Email</a>
