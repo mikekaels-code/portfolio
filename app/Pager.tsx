@@ -114,6 +114,11 @@ export function Pager() {
                           alt={p.name}
                           title={p.name}
                           className="logo"
+                          style={
+                            {
+                              "--logo-scale": p.scale ?? 1,
+                            } as React.CSSProperties
+                          }
                         />
                       ))}
                     </div>

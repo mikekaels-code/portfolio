@@ -24,17 +24,20 @@ export const story: Slide[] = [
   { text: "He lives and works in Indonesia." },
 ];
 
-export const partnerRows = [
+export type Partner = { name: string; src: string; scale?: number };
+
+// `scale` optically balances compact/square marks against wide wordmarks
+export const partnerRows: Partner[][] = [
   [
     { name: "Tokopedia", src: "/logos/tokopedia.png" },
     { name: "Maybank", src: "/logos/maybank.png" },
-    { name: "Cloud Ace", src: "/logos/cloud-ace.png" },
+    { name: "Cloud Ace", src: "/logos/cloud-ace.png", scale: 2.2 },
     { name: "Pertamina", src: "/logos/pertamina.png" },
-    { name: "KOCO", src: "/logos/koco.png" },
+    { name: "KOCO", src: "/logos/koco.png", scale: 2.2 },
   ],
   [
     { name: "Privy", src: "/logos/privy.png" },
-    { name: "Bank Rakyat Indonesia", src: "/logos/bri.png" },
+    { name: "Bank Rakyat Indonesia", src: "/logos/bri.png", scale: 1.4 },
   ],
 ];
 

@@ -93,7 +93,8 @@ a {
 }
 
 .logo {
-  height: clamp(18px, 3.4vw, 30px);
+  --logo-scale: 1;
+  height: calc(clamp(18px, 3.4vw, 30px) * var(--logo-scale));
   width: auto;
   object-fit: contain;
   filter: grayscale(1);
