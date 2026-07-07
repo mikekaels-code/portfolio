@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { story, partners, contact } from "./data";
+import { story, partnerRows, contact } from "./data";
 
 type Slide =
   | { kind: "statement"; text: string; logos?: boolean }
@@ -103,16 +103,20 @@ export function Pager() {
             <div className="statement-wrap">
               <p className="statement">{current.text}</p>
               {current.logos && (
-                <div className="logos">
-                  {partners.map((p) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      key={p.name}
-                      src={p.src}
-                      alt={p.name}
-                      title={p.name}
-                      className="logo"
-                    />
+                <div className="logo-rows">
+                  {partnerRows.map((row, r) => (
+                    <div className="logos" key={r}>
+                      {row.map((p) => (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          key={p.name}
+                          src={p.src}
+                          alt={p.name}
+                          title={p.name}
+                          className="logo"
+                        />
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}

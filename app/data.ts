@@ -24,14 +24,18 @@ export const story: Slide[] = [
   { text: "He lives and works in Indonesia." },
 ];
 
-export const partners = [
-  { name: "Bank Rakyat Indonesia", src: "/logos/bri.png" },
-  { name: "Privy", src: "/logos/privy.png" },
-  { name: "Tokopedia", src: "/logos/tokopedia.png" },
-  { name: "Maybank", src: "/logos/maybank.png" },
-  { name: "Cloud Ace", src: "/logos/cloud-ace.png" },
-  { name: "Pertamina", src: "/logos/pertamina.png" },
-  { name: "KOCO", src: "/logos/koco.png" },
+export const partnerRows = [
+  [
+    { name: "Tokopedia", src: "/logos/tokopedia.png" },
+    { name: "Maybank", src: "/logos/maybank.png" },
+    { name: "Cloud Ace", src: "/logos/cloud-ace.png" },
+    { name: "Pertamina", src: "/logos/pertamina.png" },
+    { name: "KOCO", src: "/logos/koco.png" },
+  ],
+  [
+    { name: "Privy", src: "/logos/privy.png" },
+    { name: "Bank Rakyat Indonesia", src: "/logos/bri.png" },
+  ],
 ];
 
 export const contact = {
