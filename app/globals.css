@@ -60,6 +60,17 @@ a {
   padding: 12vh 1.5rem;
 }
 
+/* black highlight on key phrases */
+.mark {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.04em 0.26em;
+  margin: 0 0.02em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .statement-wrap {
   display: flex;
   flex-direction: column;

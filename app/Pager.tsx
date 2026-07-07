@@ -4,6 +4,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { story, partnerRows, contact } from "./data";
 
+// Turn [[phrase]] markers into black-highlight spans.
+function withMarks(text: string) {
+  return text.split(/(\[\[.+?\]\])/g).map((part, i) => {
+    const m = part.match(/^\[\[(.+?)\]\]$/);
+    return m ? (
+      <span className="mark" key={i}>
+        {m[1]}
+      </span>
+    ) : (
+      part
+    );
+  });
+}
+
 type Slide =
   | { kind: "statement"; text: string; logos?: boolean }
   | { kind: "contact" };
@@ -101,7 +115,7 @@ export function Pager() {
         >
           {current.kind === "statement" ? (
             <div className="statement-wrap">
-              <p className="statement">{current.text}</p>
+              <p className="statement">{withMarks(current.text)}</p>
               {current.logos && (
                 <div className="logo-rows">
                   {partnerRows.map((row, r) => (
@@ -128,7 +142,9 @@ export function Pager() {
             </div>
           ) : (
             <div className="contact">
-              <p className="label">Get in touch.</p>
+              <p className="label">
+                Get in <span className="mark">touch</span>.
+              </p>
               <div className="links">
                 <a href={`mailto:${contact.email}`}>Email</a>
                 <a href={contact.linkedin} target="_blank" rel="noreferrer">
