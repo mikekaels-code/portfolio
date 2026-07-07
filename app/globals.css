@@ -43,6 +43,40 @@ a {
   text-decoration: none;
 }
 
+/* ---- intro title card ---- */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.intro-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.intro-name {
+  font-size: clamp(1.9rem, 6.5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.intro-line {
+  width: clamp(56px, 18vw, 150px);
+  height: 1px;
+  background: var(--bg);
+  opacity: 0.55;
+  transform-origin: center;
+}
+
 /* ---- fullscreen pager ---- */
 .stage {
   position: fixed;

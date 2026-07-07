@@ -41,7 +41,15 @@ export function Pager() {
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState(1);
   const indexRef = useRef(0);
-  const locked = useRef(false);
+  const locked = useRef(true); // locked during the intro title card
+
+  // release input once the intro has wiped away
+  useEffect(() => {
+    const t = setTimeout(() => {
+      locked.current = false;
+    }, 2600);
+    return () => clearTimeout(t);
+  }, []);
 
   const go = useCallback((target: number) => {
     if (locked.current) return;
