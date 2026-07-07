@@ -108,6 +108,9 @@ export function Pager() {
                 <a href={contact.github} target="_blank" rel="noreferrer">
                   GitHub
                 </a>
+                <a href={contact.medium} target="_blank" rel="noreferrer">
+                  Medium
+                </a>
               </div>
             </div>
           )}

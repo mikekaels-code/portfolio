@@ -12,4 +12,5 @@ export const contact = {
   email: "mike.sihombing.prof@gmail.com",
   linkedin: "https://www.linkedin.com/in/mike-sihombing/",
   github: "https://github.com/mikekaels",
+  medium: "https://medium.com/@mike.sihombing.prof",
 };
