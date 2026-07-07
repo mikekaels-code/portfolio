@@ -172,6 +172,9 @@ export function Pager() {
                 <a href={contact.medium} target="_blank" rel="noreferrer">
                   Medium
                 </a>
+                <a href={contact.whatsapp} target="_blank" rel="noreferrer">
+                  WhatsApp
+                </a>
               </div>
             </div>
           )}

@@ -78,4 +78,5 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/mike-sihombing/",
   github: "https://github.com/mikekaels",
   medium: "https://medium.com/@mike.sihombing.prof",
+  whatsapp: "https://wa.me/6282256784040",
 };
