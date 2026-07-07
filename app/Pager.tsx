@@ -2,14 +2,18 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { story, contact } from "./data";
+import { story, partners, contact } from "./data";
 
 type Slide =
-  | { kind: "statement"; text: string }
+  | { kind: "statement"; text: string; logos?: boolean }
   | { kind: "contact" };
 
 const slides: Slide[] = [
-  ...story.map((text) => ({ kind: "statement" as const, text })),
+  ...story.map((s) => ({
+    kind: "statement" as const,
+    text: s.text,
+    logos: s.logos,
+  })),
   { kind: "contact" as const },
 ];
 
@@ -96,7 +100,23 @@ export function Pager() {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
           {current.kind === "statement" ? (
-            <p className="statement">{current.text}</p>
+            <div className="statement-wrap">
+              <p className="statement">{current.text}</p>
+              {current.logos && (
+                <div className="logos">
+                  {partners.map((p) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      key={p.name}
+                      src={p.src}
+                      alt={p.name}
+                      title={p.name}
+                      className="logo"
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           ) : (
             <div className="contact">
               <p className="label">Get in touch.</p>
