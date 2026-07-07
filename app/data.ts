@@ -32,12 +32,12 @@ export const partnerRows: Partner[][] = [
     { name: "Tokopedia", src: "/logos/tokopedia.png" },
     { name: "Maybank", src: "/logos/maybank.png" },
     { name: "Cloud Ace", src: "/logos/cloud-ace.png", scale: 2.2 },
-    { name: "Pertamina", src: "/logos/pertamina.png" },
     { name: "KOCO", src: "/logos/koco.png", scale: 2.2 },
   ],
   [
     { name: "Privy", src: "/logos/privy.png" },
     { name: "Bank Rakyat Indonesia", src: "/logos/bri.png", scale: 1.4 },
+    { name: "Pertamina", src: "/logos/pertamina.png" },
   ],
 ];
 
